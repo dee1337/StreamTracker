@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:background-color="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Stream Tracker</title>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="https://ttv-api.s3.amazonaws.com/twitch.min.js"></script>
+    <style>
+        td a{
+            text-decoration: none;
+            color: black;
+        }
+        table,th,td {
+            border: .5px solid grey;
+            border-collapse: collapse;}
+        th, td {
+            padding: 2.5px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+<p>
+    <small>
+        DESCRIPTION:
+        <div style="background-color: lightgrey;border-color: #222222;border-style: solid;border-width: thin; width: 200px;">grey box: player is offline</div>
+        <div style="background-color: lightgreen;border-color: #222222;border-style: solid;border-width: thin; width: 200px;">green box: player is online</div>
+        <div style="background-color: white; width: 200px; border-color: #222222;border-style: solid;border-width: thin;" >white box: to do</div>
+        This list of Professional League of Legends Players was taken from <a href="https://www.reddit.com/r/leagueoflegends/comments/4ci2al/a_list_of_current_professional_players_streams/">reddit</a>
+    </small>
+</p>
+
+
+
+
+<!-- TABLEs -->
+<p><strong>NA</strong></p>
+
+<table><thead>
+<tr>
+    <th>TEAM</th>
+    <th>TOP</th>
+    <th>JUNGLE</th>
+    <th>MID</th>
+    <th>ADC</th>
+    <th>SUPPORT</th>
+</tr>
+</thead><tbody>
+
+<tr>
+    <td>TSM</td>
+    <td class="TSM_hauntzer" ><a target="_blank" href="https://www.twitch.tv/TSM_hauntzer">Hauntzer</a></td>
+    <td class="tsm_svenskeren"><a target="_blank" href="https://www.twitch.tv/tsm_svenskeren">Svenskeren</a></td>
+    <td class="tsm_bjergsen"><a target="_blank" href="https://www.twitch.tv/tsm_bjergsen">Bjergsen</a></td>
+    <td class="tsm_doublelift"><a target="_blank" href="https://www.twitch.tv/tsm_doublelift">Doublelift</a></td>
+    <td class="yellowstarr"><a target="_blank" href="http://www.twitch.tv/yellowstarr">Yellowstar</a></td>
+</tr>
+
+
+<tr>
+    <td>IMT</td>
+    <td class="imt_huni"><a target="_blank" href="https://www.twitch.tv/imt_huni">Huni</a></td>
+    <td class="imt_reignover"><a target="_blank" href="https://www.twitch.tv/imt_reignover">Reignover</a></td>
+    <td class="pobelter"><a target="_blank" href="https://www.twitch.tv/pobelter">Pobelter</a></td>
+    <td class="imt_wildturtle"><a target="_blank" href="https://www.twitch.tv/imt_wildturtle">Wildturtle</a></td>
+    <td class="imt_adrian"><a target="_blank" href="https://www.twitch.tv/imt_adrian">Adrian</a></td>
+</tr>
+
+<tr>
+    <td>C9</td>
+    <td class="c9balls"><a target="_blank" href="https://www.twitch.tv/c9balls">Balls</a></td>
+    <td class="c9rush"><a target="_blank" href="https://www.twitch.tv/c9rush">Rush</a></td>
+    <td class="jensen"><a target="_blank" href="https://www.twitch.tv/jensen">Jensen</a></td>
+    <td class="c9sneaky"><a target="_blank" href="https://www.twitch.tv/c9sneaky"> Sneaky</a></td>
+    <td class="hail9"><a target="_blank" href="https://www.twitch.tv/hail9/">Hai</a>/<a class="bunnyfufuu" target="_blank" href="https://www.twitch.tv/bunnyfufuu">Bunnyfufu</a></td>
+</tr>
+<tr>
+    <td>CLG</td>
+    <td class="zionspartan"><a target="_blank" href="https://www.twitch.tv/zionspartan">Darshan</a></td>
+    <td class="xmithie"><a target="_blank" href="https://www.twitch.tv/xmithie/">Xmithie</a></td>
+    <td class="lolwhoishe"><a target="_blank" href="https://www.twitch.tv/lolwhoishe/">Huhi</a></td>
+    <td class="stixxay"><a target="_blank" href="https://www.twitch.tv/stixxay">Stixxay</a></td>
+    <td class="aphromoo"><a target="_blank" href="https://www.twitch.tv/aphromoo/">Aphromoo</a></td>
+</tr>
+<tr>
+    <td>NRG</td>
+    <td class="nrgimpact"><a target="_blank" href="https://www.twitch.tv/nrgimpact">Impact</a></td>
+    <td class="moonlol"><a target="_blank" href="https://www.twitch.tv/moonlol">Moon</a></td>
+    <td class="nrggbm"><a target="_blank" href="https://www.twitch.tv/nrggbm/">GBM</a></td>
+    <td class="altec"><a target="_blank" href="https://www.twitch.tv/altec/">Altec</a></td>
+    <td class="konkwon"><a target="_blank" href="https://www.twitch.tv/konkwon">Konkwon</a></td>
+</tr>
+<tr>
+    <td>REN</td>
+    <td class="seraph"><a target="_blank" href="https://www.twitch.tv/seraph">Seraph</a></td>
+    <td class="crumbzz"><a target="_blank" href="https://www.twitch.tv/crumbzz/">Crumbzz</a></td>
+    <td class="ninja"><a target="_blank" href="http://www.azubu.tv/ninja">Ninja</a></td>
+    <td class="freezecz"><a target="_blank" href="https://www.twitch.tv/freezecz">Freeze</a></td>
+    <td class="hakuholol"><a target="_blank" href="https://www.twitch.tv/hakuholol">Hakuho</a></td>
+</tr>
+<tr>
+    <td>DIG</td>
+    <td class="birryyu"><a target="_blank" href="https://www.twitch.tv/birryyu">Billyboss</a></td>
+    <td class="kireiop"><a target="_blank" href="https://www.twitch.tv/kireiop">Kirei</a></td>
+    <td class="shiphtur"><a target="_blank" href="https://www.twitch.tv/shiphtur/">Shiphtur</a></td>
+    <td class="apollo_price"><a target="_blank" href="https://www.twitch.tv/apollo_price">Apollo</a></td>
+    <td class="kiwikid"><a target="_blank" href="https://www.twitch.tv/kiwikid">KiWiKid</a></td>
+</tr>
+
+<tr>
+    <td>EFX</td>
+    <td class="echokfo"><a target="_blank" href="https://www.twitch.tv/echokfo">Kfo</a></td>
+    <td class="hard_lol"><a target="_blank" href="https://www.twitch.tv/hard_lol">Hard</a></td>
+    <td class="froggen"><a target="_blank" href="https://www.twitch.tv/froggen">Froggen</a></td>
+    <td class="keithmcbrief"><a target="_blank" href="https://www.twitch.tv/keithmcbrief">Keith</a></td>
+    <td>Big</td>
+</tr>
+<tr>
+    <td>TL</td>
+    <td class="lourlo"><a target="_blank" href="https://www.twitch.tv/lourlo">Lourlo</a></td>
+    <td class="liquiddardoch"><a target="_blank" href="https://www.twitch.tv/liquiddardoch">Dardoch</a></td>
+    <td class="fenixl0l"><a target="_blank" href="https://www.twitch.tv/fenixl0l">FeniX</a></td>
+    <td class="piglet"><a target="_blank" href="https://www.twitch.tv/piglet/">Piglet</a></td>
+    <td class="matlife_na"><a target="_blank" href="https://www.twitch.tv/matlife_na">Matt</a></td>
+</tr>
+
+<tr>
+    <td>TiP</td>
+    <td>Feng</td>
+    <td>Procxin</td>
+    <td>Pirean</td>
+    <td class="mash"><a target="_blank" href="http://www.azubu.tv/mash">Mash</a></td>
+    <td class="gate"><a target="_blank" href="http://www.azubu.tv/gate">Gate</a></td>
+</tr>
+</tbody></table>
+
+<p><strong>EU</strong></p>
+
+<table><thead>
+<tr>
+    <th>TEAM</th>
+    <th>TOP</th>
+    <th>JUNGLE</th>
+    <th>MID</th>
+    <th>ADC</th>
+    <th>SUPPORT</th>
+</tr>
+</thead><tbody>
+
+<tr>
+    <td>H2K</td>
+    <td class="odoamne"><a target="_blank" href="https://www.twitch.tv/odoamne">Odoamne</a></td>
+    <td class="jankos"><a target="_blank" href="https://www.twitch.tv/jankos">Jankos</a></td>
+    <td class="yoosangwook"><a target="_blank" href="https://www.twitch.tv/yoosangwook">Ryu</a></td>
+    <td>Forg1ven</td>
+    <td class="lolvander"><a target="_blank" href="https://www.twitch.tv/lolvander">Vander</a></td>
+</tr>
+<tr>
+    <td>G2</td>
+    <td class="kikis1205"><a target="_blank" href="https://www.twitch.tv/kikis1205">Kikis</a></td>
+    <td class="trick_lol"><a target="_blank" href="https://www.twitch.tv/trick_lol">Trick</a></td>
+    <td class="perrkz"><a target="_blank" href="https://www.twitch.tv/perrkz">Perkz</a></td>
+    <td class="emperorkr"><a target="_blank" href="https://www.twitch.tv/emperorkr">Emperor</a></td>
+    <td class="lolhybrid"><a target="_blank" href="https://www.twitch.tv/lolhybrid">Hybrid</a></td>
+</tr>
+
+<tr>
+    <td>VIT</td>
+    <td class="cabochardlol"><a target="_blank" href="https://www.twitch.tv/cabochardlol">Cabochard</a></td>
+    <td class="shooklol"><a target="_blank" href="https://www.twitch.tv/shooklol">Shook</a></td>
+    <td class="nukeducklol"><a target="_blank" href="https://www.twitch.tv/nukeducklol">Nukeduck</a></td>
+    <td class="h2khjarnan"><a target="_blank" href="http://www.twitch.tv/h2khjarnan">Hjarnan</a></td>
+    <td class="kasinglol"><a target="_blank" href="https://www.twitch.tv/kasinglol">Kasing</a></td>
+</tr>
+<tr>
+    <td>OG</td>
+    <td class="soaz"><a target="_blank" href="http://www.azubu.tv/soaz">Soaz</a></td>
+    <td class="amazing"><a target="_blank" href="http://www.azubu.tv/amazing">Amazing</a></td>
+    <td class="xpeke"><a target="_blank" href="http://www.azubu.tv/xpeke">xPeke</a>/<a target="_blank" href="http://www.azubu.tv/powerofevil">Powerofevil</a></td>
+    <td class="niels"><a target="_blank" href="http://www.azubu.tv/niels">Zven</a></td>
+    <td class="mithy"><a target="_blank" href="http://www.azubu.tv/mithy">Mithy</a></td>
+
+</tr>
+<tr>
+    <td>UoL</td>
+    <td class="vizicsacsi"><a target="_blank" href="https://www.twitch.tv/vizicsacsi">Vizicsasci</a></td>
+    <td class="l0ulex"><a target="_blank" href="https://www.twitch.tv/l0ulex">Loulex</a></td>
+    <td class="watdefox"><a target="_blank" href="http://www.twitch.tv/watdefox">Fox</a></td>
+    <td class="steeelback"><a target="_blank" href="https://www.twitch.tv/steeelback">Steeelback</a></td>
+    <td>Hylissang</td>
+
+</tr>
+
+<tr>
+    <td>FNC</td>
+    <td class="gamsulol"><a target="_blank" href="https://www.twitch.tv/gamsulol/">Gamsu</a></td>
+    <td class="fnc_spirit"><a target="_blank" href="https://www.twitch.tv/fnc_spirit/">Spirit</a></td>
+    <td class="fabiantje"><a target="_blank" href="https://www.twitch.tv/fabiantje">Febiven</a></td>
+    <td class="rekkles"><a target="_blank" href="https://www.twitch.tv/rekkles">Rekkles</a></td>
+    <td class="klajbajk"><a target="_blank" href="https://www.twitch.tv/klajbajk">Klaj</a></td>
+</tr>
+<tr>
+    <td>Elements</td>
+    <td>Steve</td>
+    <td class="godgilius"><a target="_blank" href="https://www.twitch.tv/godgilius/">Gilius</a></td>
+    <td class="eikap"><a target="_blank" href="https://www.twitch.tv/eikap">Eika</a></td>
+    <td class="mrrallez"><a target="_blank" href="https://www.twitch.tv/mrrallez">MrRallez</a></td>
+    <td>sprattel</td>
+</tr>
+<tr>
+    <td>Splyce</td>
+    <td class="wunderwearisfame"><a target="_blank" href="http://www.twitch.tv/wunderwearisfame">Wunderwear</a></td>
+    <td class="trashylol"><a target="_blank" href="https://www.twitch.tv/trashylol">Trashy</a></td>
+    <td class="sencux"><a target="_blank" href="https://www.twitch.tv/sencux">Sencux</a></td>
+    <td class="kobbelol"><a target="_blank" href="https://www.twitch.tv/kobbelol">Kobbe</a></td>
+    <td>Nisbeth</td>
+</tr>
+<tr>
+    <td>Roccat</td>
+    <td>Fredy122</td>
+    <td class="airwaks"><a target="_blank" href="https://www.twitch.tv/airwaks">Airwaks</a></td>
+    <td class="betsy_lol"><a target="_blank" href="https://www.twitch.tv/betsy_lol">Betsy</a></td>
+    <td class="tabzzhd"><a target="_blank" href="https://www.twitch.tv/tabzzhd">Tabzz</a></td>
+    <td class="noxiak"><a target="_blank" href="https://www.twitch.tv/noxiak">Noxiak</a></td>
+</tr>
+<tr>
+    <td>GIA</td>
+    <td class="smittyj1"><a target="_blank" href="https://www.twitch.tv/smittyj1">SmittyJ</a></td>
+    <td class="wisdom"><a target="_blank" href="http://www.azubu.tv/wisdom">Wisdom</a></td>
+    <td class="pepiinero"><a target="_blank" href="https://www.twitch.tv/pepiinero">xPePii</a></td>
+    <td>SONSTAR</td>
+    <td>HustlinBeast</td>
+</tr>
+</tbody></table>
+
+
+<p><strong>LCK</strong></p>
+
+<table><thead>
+<tr>
+    <th>TEAM</th>
+    <th>TOP</th>
+    <th>JUNGLE</th>
+    <th>MID</th>
+    <th>ADC</th>
+    <th>SUPPORT</th>
+</tr>
+</thead><tbody>
+<tr>
+    <td>ROX</td>
+    <td class="townboy"><a target="_blank" href="http://www.afreeca.com/townboy">Smeb</a></td>
+    <td class="kiss281004"><a target="_blank" href="http://www.afreeca.com/kiss281004">Peanut</a></td>
+    <td class="rnghs94"><a target="_blank" href="http://play.afreeca.com/rnghs94">Kuro</a></td>
+    <td><a target="_blank" href="http://play.afreeca.com/pig2704">Pray</a></td>
+    <td><a target="_blank" href="http://play.afreeca.com/qjagus0000">GorillA</a></td>
+</tr>
+<tr>
+    <td>JAG</td>
+    <td class="trace"><a target="_blank" href="http://www.azubu.tv/trace">Trace</a>/<a target="_blank" href="http://www.azubu.tv/sohwan">SoHwan</a></td>
+    <td class="winged"><a target="_blank" href="http://www.azubu.tv/winged">Winged</a></td>
+    <td class="kuzan"><a target="_blank" href="http://www.azubu.tv/kuzan">Kuzan</a></td>
+    <td class="pilot"><a target="_blank" href="http://www.azubu.tv/pilot">Pilot</a></td>
+    <td class="chei"><a target="_blank" href="http://www.azubu.tv/chei">Chei</a></td>
+</tr>
+<tr>
+    <td>KT</td>
+    <td class="ssumday"><a target="_blank" href="http://www.azubu.tv/ssumday">Ssumday</a></td>
+    <td class="score"><a target="_blank" href="http://www.azubu.tv/score">Score</a></td>
+    <td class="Fly_kr"><a target="_blank" href="http://www.azubu.tv/Fly_kr">Fly</a></td>
+    <td class="arrow"><a target="_blank" href="http://www.azubu.tv/arrow">Arrow</a></td>
+    <td class="ignar"><a target="_blank" href="http://www.azubu.tv/ignar">IgNar</a></td>
+</tr>
+<tr>
+    <td>SKT</td>
+    <td class="duke"><a target="_blank" href="http://www.azubu.tv/duke">Duke</a></td>
+    <td class="blank"><a target="_blank" href="http://www.azubu.tv/blank">Blank</a>/<a target="_blank" href="http://www.azubu.tv/bengi">Bengi</a></td>
+    <td class="faker"><a target="_blank" href="http://www.azubu.tv/faker">Faker</a></td>
+    <td class="bang"><a target="_blank" href="http://www.azubu.tv/bang">Bang</a></td>
+    <td class="wolf"><a target="_blank" href="http://www.azubu.tv/wolf">Wolf</a></td>
+</tr>
+<tr>
+    <td>SSG</td>
+    <td class="cuvee"><a target="_blank" href="http://www.azubu.tv/cuvee">Cuvee</a></td>
+    <td class="ambition"><a target="_blank" href="http://www.azubu.tv/ambition">Ambition</a></td>
+    <td class="crown"><a target="_blank" href="http://www.azubu.tv/crown">Crown</a></td>
+    <td class="corejj"><a target="_blank" href="http://www.azubu.tv/corejj">CoreJJ</a></td>
+    <td class="wraith"><a target="_blank" href="http://www.azubu.tv/wraith">Wraith</a></td>
+</tr>
+<tr>
+    <td>CJ Entus</td>
+    <td class="untara"><a target="_blank" href="http://www.azubu.tv/untara">Untara</a></td>
+    <td class="bubbling"><a target="_blank" href="http://www.azubu.tv/bubbling">Bubbling</a></td>
+    <td class="bdd"><a target="_blank" href="http://www.azubu.tv/bdd">BDD</a></td>
+    <td class="kramer"><a target="_blank" href="http://www.azubu.tv/kramer">Kramer</a></td>
+    <td class="madlife"><a target="_blank" href="http://www.azubu.tv/madlife">Madlife</a></td>
+</tr>
+<tr>
+    <td>Afreeca</td>
+    <td><a target="_blank" href="http://play.afreeca.com/dlrtn4562">ikssu</a></td>
+    <td><a target="_blank" href="http://play.afreeca.com/wappa">Lira</a></td>
+    <td><a target="_blank" href="http://afreeca.com/sdd7707">Mickey</a></td>
+    <td><a target="_blank" href="http://afreeca.com/sky2713">Sangyoon</a></td>
+    <td><a target="_blank" href="http://play.afreeca.com/shghlwhddla">Snowflower</a></td>
+</tr>
+<tr>
+    <td>Longzhu</td>
+    <td class="flame"><a target="_blank" href="http://www.azubu.tv/flame">Flame</a>/<a target="_blank" href="http://www.azubu.tv/expession">Expession</a></td>
+    <td class="chaser"><a target="_blank" href="http://www.azubu.tv/chaser">Chaser</a>/<a target="_blank" href="http://www.azubu.tv/crash">Crash</a></td>
+    <td class="coco"><a target="_blank" href="http://www.azubu.tv/coco">Coco</a>/<a target="_blank" href="http://www.azubu.tv/frozen">Frozen</a></td>
+    <td class="fury"><a target="_blank" href="http://www.azubu.tv/fury">Fury</a>/<a target="_blank" href="http://www.azubu.tv/cpt_jack">Cpt Jack</a></td>
+    <td class="pure"><a target="_blank" href="http://www.azubu.tv/pure">Pure</a>/<a target="_blank" href="http://www.azubu.tv/zzus">Zzus</a></td>
+</tr>
+<tr>
+    <td>SBENU</td>
+    <td class="soul"><a target="_blank" href="http://www.azubu.tv/soul">Soul</a></td>
+    <td class="flawless"><a target="_blank" href="http://www.azubu.tv/flawless">Flawless</a></td>
+    <td class="sasin"><a target="_blank" href="http://www.azubu.tv/sasin">SaSin</a></td>
+    <td class="nuclear"><a target="_blank" href="http://www.azubu.tv/nuclear">Nuclear</a></td>
+    <td class="secret"><a target="_blank" href="http://www.azubu.tv/secret">Secret</a></td>
+</tr>
+<tr>
+    <td>Kongdoo</td>
+    <td class="hipo"><a target="_blank" href="http://www.azubu.tv/hipo">Hipo</a></td>
+    <td class="crush"><a target="_blank" href="http://www.azubu.tv/crush">Crush</a></td>
+    <td class="edge"><a target="_blank" href="http://www.azubu.tv/edge">Edge</a></td>
+    <td class="SSol"><a target="_blank" href="http://www.azubu.tv/SSol">SSol</a></td>
+    <td class="GuGer"><a target="_blank" href="http://www.azubu.tv/GuGer">GuGer</a></td>
+</tr>
+</tbody></table>
+
+
+<p><strong>Non-Competitive Pro Streamer</strong></p>
+
+<table><thead>
+<tr>
+    <th>GENERAL</th>
+    <th>TOP</th>
+    <th>JUNGLE</th>
+    <th>MID</th>
+    <th>ADC</th>
+    <th>SUPPORT</th>
+</tr>
+</thead><tbody>
+<tr>
+    <!-- GENERAL --> <td class="nervarien"><a target="_blank" href="https://www.twitch.tv/nervarien">Nervarien</a></td>
+    <!-- TOP     --> <td></td>
+    <!-- JUNGLE  --> <td class="trick2g"><a target="_blank" href="https://www.twitch.tv/trick2g">Trick2g (CLG)</a></td>
+    <!-- MID     --> <td class="grossie_gore"><a target="_blank" href="https://www.twitch.tv/grossie_gore">Gross Gore</a></td>
+    <!-- ADC     --> <td class="imaqtpie"><a target="_blank" href="https://www.twitch.tv/imaqtpie">imaqtpie</a></td>
+    <!-- SUPPORT --> <td class="saintvicious"><a target="_blank" href="https://www.twitch.tv/saintvicious">Saintvicious (Supp/Jung)</a></td>
+</tr>
+<tr>
+    <!-- GENERAL -->  <td class="tsm_dyrus"><a target="_blank" href="https://www.twitch.tv/tsm_dyrus">Dyrus</a></td>
+    <!-- TOP     --> <td></td>
+    <td class="nightblue3"><a target="_blank" href="https://www.twitch.tv/nightblue3">Nightblue3</a></td>
+</tr>
+<tr>
+    <!-- GENERAL --> <td class="valkrin"><a target="_blank" href="https://www.twitch.tv/valkrin">Valkrin</a></td>
+</tr>
+<tr>
+    <!-- GENERAL --> <!-- <td class="swxg"><a target="_blank" href="http://www.zhanqi.tv/swxg">VG Vasilii</a></td> -->
+</tr>
+
+
+<!-- GENERAL -->
+<!-- TOP     -->
+<!-- JUNGLE  -->
+<!-- MID     -->
+<!-- ADC     -->
+<!-- SUPPORT -->
+
+
+</tbody></table>
+
+<!-- twitch handling -->
+<script>
+    /** TWITCH API FUNCTIONS: **/
+    Twitch.init({clientId: 'pbta8w0375tir2u2victdhoe6ip4bbk'}, function(error, status) {
+    });
+
+
+    function colorize(user){
+        $.getJSON('https://api.twitch.tv/kraken/streams/'+user, function(channel) {
+            //console.log(user + " " + ( channel["stream"] === null) );
+            var data = channel["stream"];
+            var boolAnswer = ((typeof(data) !== 'undefined') && (data !== null));
+            //console.log("channel[stream] for " + user + " returns " + boolAnswer );
+            if ( boolAnswer === true) {
+                //console.log("liveStreamOnline(username) ===" + liveStreamOnline(username) + " => .".concat(username) + " is online.");
+                $( ".".concat(user) ).css("background-color", "lightgreen");
+            }
+            else if ( boolAnswer === false){
+                //console.log("liveStreamOnline(username) ===" + liveStreamOnline(username) + " => .".concat(username) + " is OFFline.");
+                $(".".concat(user)).css("background-color","lightgrey");
+            }
+        });
+    }
+
+</script>
+
+<script>
+    var twitchPlayers = ["TSM_hauntzer","tsm_svenskeren","tsm_bjergsen","tsm_doublelift","imt_huni","imt_reignover",
+        "pobelter","imt_wildturtle","imt_adrian","c9balls", "c9rush", "jensen", "c9sneaky", "hail9","bunnyfufuu", "zionspartan",
+        "xmithie", "lolwhoishe","stixxay", "aphromoo","nrgimpact","moonlol","nrggbm","altec","konkwon","seraph","crumbzz",
+        "freezecz","hakuholol","birryyu","kireiop","shiphtur","apollo_price","kiwikid","echokfo","hard_lol","froggen",
+        "keithmcbrief","lourlo","liquiddardoch","fenixl0l","piglet","matlife_na","odoamne","jankos","yoosangwook",
+        ,"lolvander","kikis1205","trick_lol","perrkz","emperorkr","lolhybrid","cabochardlol","shooklol","nukeducklol",
+        ,"kasinglol","gamsulol","fnc_spirit","fabiantje","rekkles","klajbajk","godgilius","eikap","mrrallez","trashylol",
+        "sencux","kobbelol","airwaks","betsy_lol","tabzzhd","noxiak","smittyj1","pepiinero","vizicsacsi","l0ulex","steeelback",
+        "wunderwearisfame","yellowstarr","h2khjarnan","watdefox","nightblue3","trick2g","imaqtpie","valkrin","grossie_gore","tsm_dyrus","nervarien","saintvicious"
+    ];
+
+    twitchPlayers.forEach(function (entry) {
+        colorize(entry);
+    });
+</script>
+
+<!-- azubu handling -->
+<script>
+    function getJson(user){
+        var x;
+        var json_file = jQuery.getJSON("http://api.azubu.tv/public/channel/"+user, function() {
+            //console.log( "success" );
+
+        }).done(function () {
+                x = JSON.parse(json_file.responseText);
+                //console.log("getJson("+user+"): " +x);
+                var boolAnswer = x.data.is_live;
+                if ( boolAnswer === true) {
+                    //console.log("liveStreamOnline(username) ===" + liveStreamOnline(username) + " => .".concat(username) + " is online.");
+                    $( ".".concat(user) ).css("background-color", "lightgreen");
+                }
+                else if ( boolAnswer === false){
+                    //console.log("liveStreamOnline(username) ===" + liveStreamOnline(username) + " => .".concat(username) + " is OFFline.");
+                    $(".".concat(user)).css("background-color","lightgrey");
+                }
+            }
+        );
+    }
+    var azubuStreamers = ["soaz","amazing","xpeke","niels","mithy","wisdom","hipo","crush","edge","SSol","GuGer","soul","flawless","sasin","nuclear","secret",
+        "flame","chaser","coco","fury","pure","untara","bubbling","bdd","kramer","madlife","cuvee","ambition",
+        "crown","corejj","wraith","duke","blank","faker","bang","wolf","ssumday","score","Fly_kr","arrow","ignar", "trace",
+        "winged","kuzan","pilot","chei","mash","gate","ninja"];
+    azubuStreamers.forEach(function (entry) {
+        getJson(entry);
+    });
+</script>
+
+
+<!-- zhangi.tv -->
+
+<script>
+    /**
+     * zhangi disallows cross-site fetching, need a work around
+     * @param room_id
+     * @param user is http://www.zhanqi.tv/USER
+     */
+    function zhangiTv(room_id, user){
+        var x;
+        var json_file = jQuery.getJSON("http://www.zhanqi.tv/api/public/room.liveparam?room_id="+room_id, function() {
+            //console.log( "success" );
+
+        }).done(function () {
+                x = JSON.parse(json_file.responseText);
+                //console.log("getJson("+user+"): " +x);
+                var boolAnswer = (x.data.status == "4" || x.data.status == 4);
+                if ( boolAnswer === true) {
+                    //console.log("liveStreamOnline(username) ===" + liveStreamOnline(username) + " => .".concat(username) + " is online.");
+                    $( ".".concat(user) ).css("background-color", "lightgreen");
+                }
+                else if ( boolAnswer === false){
+                    //console.log("liveStreamOnline(username) ===" + liveStreamOnline(username) + " => .".concat(username) + " is OFFline.");
+                    $(".".concat(user)).css("background-color","lightgrey");
+                }
+            }
+        );
+    }
+    // zhangiTv("40145","swxg");
+</script>
+
+
+
+<p><small>CHANGELOG:<br> 2016-04-03: Azubu streams are added now. Maybe i have time to add afreeca stream support. Famous SoloQ streamers will be added soon.</small></p>
+</body>
+</html>
