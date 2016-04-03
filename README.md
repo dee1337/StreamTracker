@@ -13,3 +13,10 @@ i hacked some fast js/html code together, but people asked me to open source it,
 ### Where?
 changes will be uploaded and can be seen on the [project site](http://novocalculus.com/streams/)
 
+### Things that could be done:
+- code cleanup (i'm a javascript newb, more experienced with C++/Java/Python/... )
+- add more streaming websites
+- css enhancements for mobile experience (but should be clean, small, functional)
+- removing tables in favour of divs
+- adding features, e.g. if player x streams, check riot api for current champ and display it (and so on)
+
