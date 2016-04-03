@@ -14,7 +14,8 @@ i hacked some fast js/html code together, but people asked me to open source it,
 changes will be uploaded and can be seen on the [project site](http://novocalculus.com/streams/)
 
 ### Things that could be done:
-- code cleanup (i'm a javascript newb, more experienced with C++/Java/Python/... )
+- **highest priority**: keep the data up-to-date
+- code cleanup / modularization (i'm a javascript newb, more experienced with C++/Java/Python/... )
 - add more streaming websites
 - css enhancements for mobile experience (but should be clean, small, functional)
 - removing tables in favour of divs
